@@ -1,1 +1,5 @@
-GEMINI_API_KEY=AIzaSyBzSVWwUcmqbCyQrKPDSFumnP3q6QJBxSY
+# This file previously contained an exposed Gemini API key. For security, the secret value has been removed.
+# Action required:
+# 1) Rotate the exposed Gemini API key immediately in the Google Cloud console.
+# 2) Delete this file from the repository history if it was committed (use `git rm env` and make a new commit).
+# 3) Add your key to the environment variables in Vercel/Netlify or to a local `.env.local` (gitignored).

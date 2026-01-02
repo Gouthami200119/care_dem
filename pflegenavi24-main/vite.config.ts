@@ -10,10 +10,8 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
+      // NOTE: Do not inject sensitive API keys into the client bundle. Set `GEMINI_API_KEY` as a secret
+      // in your deployment platform (Vercel/Netlify) and call the API from serverless functions.
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
