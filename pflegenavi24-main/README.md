@@ -8,6 +8,8 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/1bIqgUa5AmDqTZF2hugF0-XgBkOHo4UAF
 
+See `DEPLOY_NETLIFY.md` for Netlify deployment steps.
+
 ## Run Locally
 
 **Prerequisites:**  Node.js

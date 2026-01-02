@@ -9,9 +9,14 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
       },
+      base: '/',
       plugins: [react()],
-      // NOTE: Do not inject sensitive API keys into the client bundle. Set `GEMINI_API_KEY` as a secret
-      // in your deployment platform (Vercel/Netlify) and call the API from serverless functions.
+      define: {
+        // Use Vite-prefixed env for public variables (VITE_). Do NOT store secrets here for production.
+        // For secret keys, use Netlify environment variables + serverless functions instead.
+        'process.env.API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY)
+      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),

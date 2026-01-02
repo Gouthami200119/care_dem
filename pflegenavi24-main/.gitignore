@@ -11,10 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-
-# Local environment files (do NOT commit secrets)
-.env
-.env.*
 env
 
 # Editor directories and files
